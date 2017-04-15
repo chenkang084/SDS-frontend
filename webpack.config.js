@@ -66,10 +66,10 @@ var webpackConfig = {
                 }
             },
             {
-                test: /\.scss$/,
+                test: /\.(scss|css)$/,
                 // loader: 'style!css!postcss!sass',
                 loader: ExtractTextPlugin.extract([ 'css-loader', 'postcss-loader','sass-loader' ]),
-                // exclude: /node_modules/,
+                exclude: /node_modules/,
             },
             {
                 test: /\.html$/,
@@ -118,10 +118,10 @@ var webpackConfig = {
         //     manifest: require('./app/assets/dll/vendor-manifest.json')
         // }),
 
-        // new CopyWebpackPlugin([{
-        //     from: './app/assets',
-        //     to: 'assets'
-        // }]),
+        new CopyWebpackPlugin([{
+            from: './app/',
+            to: './'
+        }]),
 
         new ExtractTextPlugin('style.css', {
             allChunks: true,
