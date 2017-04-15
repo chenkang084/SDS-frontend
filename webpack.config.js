@@ -15,32 +15,32 @@ var webpackConfig = {
     devtool: 'cheap-module-source-map', //generate source map for developing
     entry: {
         app: __dirname + "/app/bootstrap.js", //the main file for start app
-        vendor: [
-            // 'angular',
-            // 'angular-route',
-            // 'angular-ui-bootstrap',
-            // 'lodash',
-            // 'bootstrap',
-            // 'bootstrap-loader',
-            // 'jquery'
-        ],
+        // vendor: [
+        //     // 'angular',
+        //     // 'angular-route',
+        //     // 'angular-ui-bootstrap',
+        //     // 'lodash',
+        //     // 'bootstrap',
+        //     // 'bootstrap-loader',
+        //     // 'jquery'
+        // ],
     },
 
     output: {
-        // publicPath: __dirname + "/public",
         path: __dirname + "/dist", //the path saving packed file 
         // filename: "bundle[hash].js" //the out put file name
         filename: "bundle.js"
     },
-    // devServer: {
-    //     contentBase: "./public", //webpack server read file path
-    //     colors: true, //terminal shows log with color
-    //     historyApiFallback: true, //
-    //     inline: true, //
-    //     hot: true,
-    //     progress: true,
-    //     compress: true
-    // },
+    devServer: {
+        contentBase: "./app", //webpack server read file path
+        colors: true, //terminal shows log with color
+        historyApiFallback: true, //
+        inline: true, //
+        hot: true,
+        progress: true,
+        compress: true,
+        port:'8090'
+    },
     resolve: {
         extensions: ['', '.webpack.js', '.web.js', '.ts', '.js'],
         alias: {
@@ -126,6 +126,8 @@ var webpackConfig = {
         new ExtractTextPlugin('style.css', {
             allChunks: true,
         }),
+
+        new webpack.HotModuleReplacementPlugin()
 
     ],
 
