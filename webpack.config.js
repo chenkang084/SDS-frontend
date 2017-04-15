@@ -69,6 +69,7 @@ var webpackConfig = {
                 test: /\.scss$/,
                 // loader: 'style!css!postcss!sass',
                 loader: ExtractTextPlugin.extract([ 'css-loader', 'postcss-loader','sass-loader' ]),
+                include: path.resolve(__dirname, '/app/styles'),
                 // exclude: /node_modules/,
             },
             {
@@ -118,10 +119,10 @@ var webpackConfig = {
         //     manifest: require('./app/assets/dll/vendor-manifest.json')
         // }),
 
-        // new CopyWebpackPlugin([{
-        //     from: './app/assets',
-        //     to: 'assets'
-        // }]),
+        new CopyWebpackPlugin([{
+            from: './app/assets',
+            to: 'assets'
+        }]),
 
         new ExtractTextPlugin('style.css', {
             allChunks: true,
