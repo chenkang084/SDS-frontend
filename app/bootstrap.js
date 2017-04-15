@@ -1,3 +1,8 @@
+import "./styles/vendor.css"
+import "./styles/app.css"
+// import "./styles/404.css"
+// import "./styles/auth.css"
+
 import "./pages/pages.module.js"
 import "./theme/theme.module.js"
 import "./pages/charts/charts.module.js"
@@ -138,7 +143,3 @@ import "./pages/form/inputs/widgets/oldSwitches/switch.directive.js"
 import "./pages/form/inputs/widgets/switches/SwitchDemoPanelCtrl.js"
 import "./pages/form/inputs/widgets/tagsInput/tagsInput.directive.js" 
 
-
-
-
-// import "../sass/module.js"

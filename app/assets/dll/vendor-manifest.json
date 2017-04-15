@@ -1,0 +1,7 @@
+{
+  "name": "vendor",
+  "content": {
+    "./node_modules/.1.6.4@angular/index.js": 1,
+    "./node_modules/.1.6.4@angular/angular.js": 2
+  }
+}
