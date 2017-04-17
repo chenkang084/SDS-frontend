@@ -14,7 +14,7 @@ console.log("=============================" + __dirname + "=====================
 var webpackConfig = {
     devtool: 'cheap-module-source-map', //generate source map for developing
     entry: {
-        app: __dirname + "/app/bootstrap.js", //the main file for start app
+        app: path.join(__dirname, "/app/bootstrap/bootstrap.js"), //the main file for start app
         // vendor: [
         //     // 'angular',
         //     // 'angular-route',
@@ -39,13 +39,13 @@ var webpackConfig = {
         hot: true,
         progress: true,
         compress: true,
-        port:'8090'
+        port: '3000'
     },
     resolve: {
         extensions: ['', '.webpack.js', '.web.js', '.ts', '.js'],
         alias: {
-            moment: path.join(__dirname, '/node_modules/moment/min/moment-with-locales.js'),
-            'font-awesome': path.join(__dirname, '/node_modules/font-awesome/scss/font-awesome.scss'),
+            // moment: path.join(__dirname, '/node_modules/moment/min/moment-with-locales.js'),
+            // 'font-awesome': path.join(__dirname, '/node_modules/font-awesome/scss/font-awesome.scss'),
         }
     },
     module: { //
@@ -68,7 +68,7 @@ var webpackConfig = {
             {
                 test: /\.(scss|css)$/,
                 // loader: 'style!css!postcss!sass',
-                loader: ExtractTextPlugin.extract([ 'css-loader', 'postcss-loader','sass-loader' ]),
+                loader: ExtractTextPlugin.extract(['css-loader', 'postcss-loader', 'sass-loader']),
                 exclude: /node_modules/,
             },
             {
