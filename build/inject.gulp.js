@@ -10,7 +10,7 @@ var uglify = require('gulp-uglify');
 
 gulp.task("inject", function() {
     return gulp.src('./app/index.html')
-        .pipe(inject(gulp.src(['./app/scripts/vendor-*.js'], { read: false }), {
+        .pipe(inject(gulp.src(['./app/library/vendor-*.js'], { read: false }), {
             ignorePath: 'app',
             addRootSlash: false,
             // relative:false
@@ -20,10 +20,10 @@ gulp.task("inject", function() {
 
 gulp.task("rename", function() {
     console.log("==============="+process.env.NODE_ENV)
-    gulp.src('./app/scripts/vendor.js')
+    gulp.src('./app/library/vendor.js')
         .pipe(gulpif(process.env.NODE_ENV === 'prod', uglify())) // 仅在生产环境时候进行压缩
         .pipe(rename("./vendor-" + new Date().getTime() + ".js"))
-        .pipe(gulp.dest("./app/scripts/"))
+        .pipe(gulp.dest("./app/library/"))
 })
 
 

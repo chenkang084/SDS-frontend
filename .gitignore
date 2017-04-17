@@ -7,7 +7,7 @@ debug.log
 npm-debug.log
 
 #ignore the self build vendor-*.js
-/app/scripts/vendor-*.js
+/app/library/vendor-*.js
 
 #ignore the index.html ,so that prevent the conflicts for self inject vendor-*.js
 /app/index.html
