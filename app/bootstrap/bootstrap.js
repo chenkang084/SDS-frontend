@@ -6,6 +6,7 @@ import "../styles/app.css"
 import "../pages/overview/overview.module.js"
 import "../pages/storage/storage.module.js"
 import "../pages/storage/pools/pools.module.js"
+import "../pages/storage/pools/PoolsCtrl.js"
 
 
 import "../pages/pages.module.js"

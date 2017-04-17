@@ -13,8 +13,8 @@
     $stateProvider
       .state('storage.pools', {
         url: '/pool',
-        template: '<p>this is for pool</p>',
-        // templateUrl: 'pages/components/timeline/pools.html',
+        // template: '<p>this is for pool</p>',
+        templateUrl: 'pages/storage/pools/pools.html',
           title: 'Pool',
           sidebarMeta: {
             icon: 'ion-ios-pulse',
