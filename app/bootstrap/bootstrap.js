@@ -1,4 +1,4 @@
-import "../styles/vendor.css"
+import "../library/vendor.css"
 import "../styles/app.css"
 // import "./styles/404.css"
 // import "./styles/auth.css"
