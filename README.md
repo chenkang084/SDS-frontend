@@ -1,6 +1,6 @@
 # SDS-frondend
 
-SDS-frondend based on blur/admin and refactored via webpack ,es6,es7.
+SDS-frondend based on [blur/admin](https://github.com/akveo/blur-admin)  and refactored via webpack ,es6,es7.
 
 Now you can write es6,es7,sass in the project easily.
 Please follow as below steps to run you local environment.
@@ -9,8 +9,9 @@ steps:
   2. npm run setup
   3. npm start
 
+then you can access http://localhost:3000 to start your app.
 
-note:
+#note:
 
 you need change the base url in index.html to make sure your app runs well.
 
