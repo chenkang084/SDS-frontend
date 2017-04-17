@@ -3,6 +3,11 @@ import "../styles/app.css"
 // import "./styles/404.css"
 // import "./styles/auth.css"
 
+import "../pages/overview/overview.module.js"
+import "../pages/storage/storage.module.js"
+import "../pages/storage/pools/pools.module.js"
+
+
 import "../pages/pages.module.js"
 import "../theme/theme.module.js"
 import "../pages/charts/charts.module.js"
