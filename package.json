@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "initial":"npm run clean && node ./build/copy.index.js && npm run gulp-build",
+        "setup":"npm run clean && node ./build/copy.index.js && npm run gulp-build",
         "gulp-build": "gulp rename && gulp inject",
         "start": "cross-env NODE_ENV=local webpack-dev-server --progress",
         "run-qa": "cross-env NODE_ENV=qa webpack-dev-server",
