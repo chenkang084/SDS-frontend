@@ -13,7 +13,7 @@
         "build-local": "npm run clean && cross-env NODE_ENV=local npm run gulp-build && cross-env NODE_ENV=local webpack ",
         "build-qa": "npm run clean && cross-env NODE_ENV=qa npm run gulp-build && cross-env NODE_ENV=qa webpack ",
         "build-prod": "npm run clean && cross-env NODE_ENV=prod npm run gulp-build && cross-env NODE_ENV=prod webpack ",
-        "clean": "rimraf ./app/assets/dll/* && rimraf ./dist/* && rimraf ./app/scripts/vendor-*.js",
+        "clean": "rimraf ./app/assets/dll/* && rimraf ./dist/* && rimraf ./app/library/vendor-*.js",
         "build-dll": "npm run clean && webpack --colors --profile --display-modules --config webpack.dll.config.js "
     },
     "author": "chenkang084@163.com",
