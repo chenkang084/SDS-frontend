@@ -29,7 +29,7 @@
                 if (!opened) {
                     methods = $uibModal.open({
                         animation: true,
-                        templateUrl: 'src/app/pages/ui/modals/progressModal/progressModal.html',
+                        templateUrl: '/pages/ui/modals/progressModal/progressModal.html',
                         size: 'sm',
                         keyboard: false,
                         backdrop: 'static'
