@@ -11,7 +11,7 @@ steps:
 
 then you can access http://localhost:3000 to start your app.
 
-#note:
+## note:
 
 you need change the base url in index.html to make sure your app runs well.
 

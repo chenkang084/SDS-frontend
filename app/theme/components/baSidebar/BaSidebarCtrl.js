@@ -12,7 +12,7 @@
   function BaSidebarCtrl($scope, baSidebarService) {
 
     $scope.menuItems = baSidebarService.getMenuItems();
-    $scope.defaultSidebarState = $scope.menuItems[0].stateRef;
+    $scope.defaultSidebarState = $scope.menuItems[0] && $scope.menuItems[0].stateRef;
 
     $scope.hoverItem = function ($event) {
       $scope.showHoverElem = true;
