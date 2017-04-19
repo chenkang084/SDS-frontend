@@ -14,16 +14,16 @@ console.log("=============================" + __dirname + "=====================
 var webpackConfig = {
     devtool: 'module-source-map', //generate source map for developing
     entry: {
-        app: path.join(__dirname, "/app/bootstrap/bootstrap.js"), //the main file for start app
-        // vendor: [
-        //     // 'angular',
-        //     // 'angular-route',
-        //     // 'angular-ui-bootstrap',
-        //     // 'lodash',
-        //     // 'bootstrap',
-        //     // 'bootstrap-loader',
-        //     // 'jquery'
-        // ],
+        app: ['babel-polyfill', path.join(__dirname, "/app/bootstrap/bootstrap.js")] //the main file for start app
+            // vendor: [
+            //     // 'angular',
+            //     // 'angular-route',
+            //     // 'angular-ui-bootstrap',
+            //     // 'lodash',
+            //     // 'bootstrap',
+            //     // 'bootstrap-loader',
+            //     // 'jquery'
+            // ],
     },
 
     output: {
@@ -50,7 +50,7 @@ var webpackConfig = {
     },
     module: { //
         noParse: [
-            /moment-with-locales/
+            // /moment-with-locales/
         ],
 
         loaders: [{
@@ -62,7 +62,7 @@ var webpackConfig = {
                 exclude: /node_modules/,
                 loader: 'babel',
                 query: {
-                    presets: ['es2015']
+                    presets: ["es2015", "stage-0"]
                 }
             },
             {
