@@ -146,4 +146,4 @@ import "../pages/form/inputs/widgets/tagsInput/tagsInput.directive.js"
 
 import { encode,decode } from "../utils/base64.util"
 
-// import "../pages/overview/testService.js"
+import "../pages/overview/overview.module.js"
