@@ -1,9 +1,18 @@
 /**
  * Created by chenkang1 on 2017/4/18.
+ * the base64.util.js can help users encode or decode the text to base64 ,and the file writes by es6 
+ * if you want to use the util, please comply with es6 grammer.
+ *  import encode method from path + base64.util.js ,note:please change the path where the files locates.
+ * For example:import {encode} from "./base64.util.js"
  */
 
 const _keyStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
 
+/**
+ * 
+ * @param {String} input what you want to encode string
+ * @return {String} return the string that has been encode to base64
+ */
 export const encode = (input) => {
     var output = "";
     var chr1, chr2, chr3, enc1, enc2, enc3, enc4;
