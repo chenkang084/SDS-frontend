@@ -7,6 +7,7 @@ import "../pages/overview/overview.module.js"
 import "../pages/storage/storage.module.js"
 import "../pages/storage/pools/pools.module.js"
 import "../pages/storage/pools/PoolsCtrl.js"
+import "../pages/storage/pools/pools.action.js"
 
 
 import "../pages/pages.module.js"

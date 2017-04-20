@@ -15,6 +15,7 @@
         url: '/pool',
         // template: '<p>this is for pool</p>',
         templateUrl: 'pages/storage/pools/pools.html',
+        controller: 'PoolsCtrl',
           title: 'Pool',
           sidebarMeta: {
             icon: 'ion-ios-pulse',
