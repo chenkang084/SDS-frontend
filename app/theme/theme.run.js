@@ -8,6 +8,7 @@
     angular.module('BlurAdmin.theme')
         .run(themeRun);
 
+<<<<<<< HEAD
     /** @ngInject */
     function themeRun($timeout, $rootScope, layoutPaths, preloader, $q, baSidebarService, themeLayoutSettings) {
         
@@ -15,6 +16,14 @@
             preloader.loadAmCharts(),
             $timeout(3000)
         ];
+=======
+  /** @ngInject */
+  function themeRun($timeout, $rootScope, layoutPaths, preloader, $q, baSidebarService, themeLayoutSettings) {
+    var whatToWait = [
+      preloader.loadAmCharts(),
+      // $timeout(3000)
+    ];
+>>>>>>> xiaogang
 
         var theme = themeLayoutSettings;
         if (theme.blur) {
@@ -30,11 +39,19 @@
             $rootScope.$pageFinishedLoading = true;
         });
 
+<<<<<<< HEAD
         $timeout(function() {
             if (!$rootScope.$pageFinishedLoading) {
                 $rootScope.$pageFinishedLoading = true;
             }
         }, 7000);
+=======
+    $timeout(function () {
+      if (!$rootScope.$pageFinishedLoading) {
+        $rootScope.$pageFinishedLoading = true;
+      }
+    }, 0);
+>>>>>>> xiaogang
 
         $rootScope.$baSidebarService = baSidebarService;
     }
