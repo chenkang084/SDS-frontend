@@ -16,10 +16,10 @@ angular.module('BlurAdmin', [
         'BlurAdmin.theme',
         'BlurAdmin.pages'
     ])
-    .config(function($locationProvider) {
-        // Set to use HTML5 mode, which removes the #! from modern browsers.
-        // Only when config it and browser support HTML5 history API
-        let isHtml5Mode = !!true && (window.history && 'pushState' in window.history);
-        $locationProvider.html5Mode(isHtml5Mode);
-        $locationProvider.hashPrefix('!');
-    })
+    // .config(function($locationProvider) {
+    //     // Set to use HTML5 mode, which removes the #! from modern browsers.
+    //     // Only when config it and browser support HTML5 history API
+    //     let isHtml5Mode = !!true && (window.history && 'pushState' in window.history);
+    //     $locationProvider.html5Mode(isHtml5Mode);
+    //     $locationProvider.hashPrefix('!');
+    // })
