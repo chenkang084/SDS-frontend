@@ -6,18 +6,18 @@
 
 // import BaseRestfulService from "../../commons/services/baseRestfulService.js"
 
-angular.module('BlurAdmin.pages.overview', [])
+angular.module('BlurAdmin.pages.clusterMgmt', [])
     .config(routeConfig);
 
 /** @ngInject */
 function routeConfig($stateProvider) {
     $stateProvider
-        .state('overview', {
-            url: '/overview',
-            templateUrl: 'pages/overview/overview.html',
-            title: 'Overview',
+        .state('clusterMgmt', {
+            url: '/clusterMgmt',
+            template: '<div ui-view  autoscroll="true" autoscroll-body-top></div>',
+            title: 'Cluster Management',
             sidebarMeta: {
-                icon: 'ion-android-home',
+                icon: 'ion-navicon-round',
                 order: 0,
             },
         });

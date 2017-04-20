@@ -5,6 +5,8 @@
  * 
  */
 
+import config from "../../config"
+
 export default class BaseRestfulService {
     constructor($http) {
         this.$http = $http;
@@ -18,7 +20,7 @@ export default class BaseRestfulService {
 
         return this.$http({
             method: "GET",
-            url: url,
+            url: config.uri.api + url,
             params: params,
             headers: {
                 'Content-type': 'application/json;charset=utf-8'
@@ -29,7 +31,7 @@ export default class BaseRestfulService {
     doPost(url, params) {
         return this.$http({
             method: "POST",
-            url: url,
+            url: config.uri.api + url,
             params: params,
             headers: {
                 'Content-type': 'application/json;charset=utf-8'
@@ -40,7 +42,7 @@ export default class BaseRestfulService {
     doPut(url, params) {
         return this.$http({
             method: "PUT",
-            url: url,
+            url: config.uri.api + url,
             params: params,
             headers: {
                 'Content-type': 'application/json;charset=utf-8'
@@ -51,7 +53,7 @@ export default class BaseRestfulService {
     doDelete(url, params) {
         return this.$http({
             method: "DELETE",
-            url: url,
+            url: config.uri.api + url,
             data: angular.toJson(params),
             headers: {
                 'Content-type': 'application/json;charset=utf-8'
