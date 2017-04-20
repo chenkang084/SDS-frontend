@@ -3,6 +3,9 @@ import "../styles/app.css"
 // import "./styles/404.css"
 // import "./styles/auth.css"
 
+/**
+ * dynamic import theme/*.module.js
+ */
 let themeModules = require.context('../theme', true, /^.*\.module\.js$/igm);
 themeModules.keys().forEach(themeModules);
 let themeJs = require.context('../theme', true, /^.*\.((?!module).)*\.js$/igm);
