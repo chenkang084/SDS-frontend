@@ -20,6 +20,15 @@ function routeConfig($stateProvider) {
                 icon: 'ion-navicon-round',
                 order: 0,
             },
+        }).state('clusterMgmt.tableSample', {
+            url: '/tableSample',
+            templateUrl: 'pages/clusterMgmt/tableSample/tableSample.html',
+            controller: 'tableSamplePageCtrl',
+            title: 'Sample',
+            sidebarMeta: {
+                icon: 'ion-asterisk',
+                order: 10,
+            },
         });
 }
 
