@@ -4,7 +4,7 @@
  */
 
 
-import BaseRestfulService from "../../commons/services/baseRestfulService.js"
+import BaseRestfulService from "../../commons/base/baseRestfulService.js"
 
 
 class ClusterService extends BaseRestfulService {

@@ -8,20 +8,27 @@ import "../styles/app.css"
  */
 let themeModules = require.context('../theme', true, /^.*\.module\.js$/igm);
 themeModules.keys().forEach(themeModules);
+
+/**
+ * dynamic import theme/*.*.js except module
+ */
 let themeJs = require.context('../theme', true, /^.*\.((?!module).)*\.js$/igm);
 themeJs.keys().forEach(themeJs);
 
+/**
+ * dynamic import pages/*.module.js
+ */
 let pageModules = require.context('../pages', true, /^.*\.module\.js$/igm);
 pageModules.keys().forEach(pageModules);
+
+/**
+ * dynamic import pages/*.*.js except module
+ */
 let pageJs = require.context('../pages', true, /^.*\.((?!module).)*\.js$/igm);
 pageJs.keys().forEach(pageJs);
 
 require( "./app.js")
 
 
-
-import { encode,decode } from "../utils/base64.util"
-
-import "../pages/clusterMgmt/clusterMgmt.module.js"
 
 
