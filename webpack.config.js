@@ -12,7 +12,7 @@ console.log("=============================" + env + "===========================
 console.log("=============================" + __dirname + "=============================");
 
 var webpackConfig = {
-    devtool: 'module-source-map', //generate source map for developing
+    devtool: env === 'prod' ? false : 'module-source-map', //generate source map for developing
     entry: {
         app: ['babel-polyfill', path.join(__dirname, "/app/bootstrap/bootstrap.js")] //the main file for start app
             // vendor: [
