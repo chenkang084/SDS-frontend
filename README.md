@@ -1,6 +1,6 @@
-# SDS-frondend
+# SDS-frontend
 
-SDS-frondend based on [blur/admin](https://github.com/akveo/blur-admin)  and refactored via webpack ,es6,es7.
+SDS-frontend based on [blur/admin](https://github.com/akveo/blur-admin)  and refactored via webpack ,es6,es7.
 
 Now you can write es6,es7,sass in the project easily.
 Please follow as below steps to run you local environment.
